@@ -1,0 +1,9 @@
+**/*.ipynb_checkpoints/
+
+**/.DS_Store
+
+**/.env/*
+
+*.pyc
+
+**/node_modules/*
