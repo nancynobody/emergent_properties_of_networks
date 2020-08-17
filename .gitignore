@@ -7,3 +7,6 @@
 *.pyc
 
 **/node_modules/*
+
+**/bin/*
+
