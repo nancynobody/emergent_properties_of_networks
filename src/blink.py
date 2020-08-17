@@ -1,14 +1,11 @@
 #!usr/bin/python
 
-from subsystem import Subsystem
-
-class Heart(Subsystem):
-    def __init__(self, name, freq):
+class Blink():
+    def __init__(self, name, freq=60):
         self.name = name
         self.freq = freq
     
     def start(self, t=20):
-        """On start() the heart will have t seconds until kill w/o controller inputs"""
         pass
 
     def kill(self):
@@ -20,20 +17,16 @@ class Heart(Subsystem):
         pass
 
     def receive(self):
-        # receives hormones "epi-10"; "ace-06"
-        self.update_freq('ace', '10')
+        self.update_freq('0000010101011111101')
         pass
 
-    def update_freq(self, type, qty):
+    def update_freq(self, package):
         """
         Update beat frequency based on hormone types and quantity inputs
         """
-        # if ace then -- by qty
-        # if epi then ++ by qty
         new_freq = 0
         self.freq = new_freq
 
 if __name__ == '__main__':
-    heart = Heart("heart")
-    #TODO
-    heart.start(t=20)
+    blink = Blink("blink")
+    blink.start()
